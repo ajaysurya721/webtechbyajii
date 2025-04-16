@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopSmart - Online Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #888;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    form input, form select {
+      padding: 8px;
+      margin-bottom: 10px;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">🏠 Home</a>
+    <a href="#products">🛒 Products</a>
+    <a href="#order">📝 Order Form</a>
+    <a href="#gallery">🎥 Gallery</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to <em>ShopSmart</em> 🛍️</h1>
+    <p>
+      We're excited to bring you <b>exclusive deals</b> and <i>best-selling products</i> at 
+      <u>unbeatable prices</u>! Don’t miss our <b><u>Limited Time Offers</u></b>!
+    </p>
+    <p>
+      Explore our <a href="#products">Products</a>, place an <a href="#order">Order</a>, 
+      or check out the <a href="#gallery">Gallery</a> for previews.
+    </p>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products">
+    <h2>🛍️ Our Product Catalog</h2>
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Wireless Headphones</td>
+        <td>$49.99</td>
+        <td><b><u>20% OFF!</u></b> Noise-canceling, over-ear comfort.</td>
+      </tr>
+      <tr>
+        <td>Smart Watch</td>
+        <td>$99.00</td>
+        <td>Fitness tracking and notifications in style.</td>
+      </tr>
+      <tr>
+        <td>USB-C Charger</td>
+        <td>$15.00</td>
+        <td><i>Fast-charging compatible</i> with major brands.</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Order Form Section -->
+  <section id="order">
+    <h2>📝 Place Your Order</h2>
+    <form>
+      <label>Name:<br><input type="text" required></label><br>
+      <label>Email:<br><input type="email" required></label><br>
+      <label>Product:<br><input type="text" placeholder="e.g., Smart Watch" required></label><br>
+      <label>Quantity:<br><input type="number" min="1" required></label><br>
+      <label>Payment Method:<br>
+        <select>
+          <option>Card</option>
+          <option>Cash on Delivery</option>
+          <option>PayPal</option>
+        </select>
+      </label><br>
+      <label>
+        <input type="checkbox" required> I agree to the <a href="#">store policies</a>.
+      </label><br><br>
+      <button type="submit">Submit Order</button>
+    </form>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>🎬 Product Gallery</h2>
+
+    <h3>📢 Promotional Message</h3>
+    <audio controls>
+      <source src="promo.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <h3>🛠️ Product Overview Video</h3>
+    <video width="640" height="360" controls poster="thumbnail.jpg">
+      <source src="product_demo.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+  </section>
+
+</body>
+</html>
