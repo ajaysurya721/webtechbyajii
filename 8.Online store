@@ -37,4 +37,48 @@
       <td>⚡ USB-C Charger</td>
       <td>$15.00</td>
       <td><i>Fast-charging</i> compatible with all major brands.</td>
-    </tr
+    </tr>
+  </table>
+
+  <h2>📦 Order Form</h2>
+  <form>
+    <label>Full Name:</label><br>
+    <input type="text" required><br><br>
+
+    <label>Email Address:</label><br>
+    <input type="email" required><br><br>
+
+    <label>Product Name:</label><br>
+    <input type="text" required><br><br>
+
+    <label>Quantity:</label><br>
+    <input type="number" min="1" required><br><br>
+
+    <label>Payment Method:</label><br>
+    <select>
+      <option value="card">Card</option>
+      <option value="cod">Cash on Delivery</option>
+      <option value="paypal">PayPal</option>
+    </select><br><br>
+
+    <label><input type="checkbox" required> I agree to the Store Policies.</label><br><br>
+
+    <input type="submit" value="Submit Order">
+  </form>
+
+  <h2>🎬 Product Gallery</h2>
+
+  <h3>🔊 Promotional Audio</h3>
+  <audio controls>
+    <source src="promo.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+  <h3>📹 Product Demo Video</h3>
+  <video width="320" height="240" controls poster="thumbnail.jpg">
+    <source src="product_demo.mp4" type="video/mp4">
+    Your browser does not support video.
+  </video>
+
+</body>
+</html>
