@@ -1,72 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ShopSmart - Online Store</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-    nav {
-      background-color: #f4f4f4;
-      padding: 10px;
-      margin-bottom: 20px;
-    }
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      font-weight: bold;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f5f9;
+      margin: 0;
+      padding: 0;
       color: #333;
     }
-    section {
-      margin-bottom: 50px;
+
+    header {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+
+    nav {
+      background-color: #ffffff;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 20px;
+      color: #0072ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #0072ff;
+      margin-bottom: 20px;
+    }
+
+    /* Product Table */
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    table, th, td {
-      border: 1px solid #888;
-    }
+
     th, td {
-      padding: 10px;
+      padding: 15px;
       text-align: left;
     }
+
+    th {
+      background-color: #0072ff;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    /* Form Styling */
+    form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
     form input, form select {
-      padding: 8px;
-      margin-bottom: 10px;
-      width: 300px;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    form button {
+      background-color: #0072ff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #005ac1;
+    }
+
+    audio, video {
+      margin-top: 15px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Extra styles for small devices */
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Header -->
+  <header>
+    <h1>🛍️ ShopSmart Online Store</h1>
+    <p>Great Deals. Fast Delivery. Trusted Quality.</p>
+  </header>
+
+  <!-- Navigation Bar -->
   <nav>
     <a href="#home">🏠 Home</a>
     <a href="#products">🛒 Products</a>
-    <a href="#order">📝 Order Form</a>
-    <a href="#gallery">🎥 Gallery</a>
+    <a href="#order">📦 Order</a>
+    <a href="#gallery">🎬 Gallery</a>
   </nav>
 
   <!-- Home Section -->
   <section id="home">
-    <h1>Welcome to <em>ShopSmart</em> 🛍️</h1>
+    <h2>🏠 Welcome to ShopSmart</h2>
     <p>
-      We're excited to bring you <b>exclusive deals</b> and <i>best-selling products</i> at 
-      <u>unbeatable prices</u>! Don’t miss our <b><u>Limited Time Offers</u></b>!
+      Welcome to <strong>ShopSmart</strong> – your one-stop destination for all things tech & lifestyle. 
+      Don’t miss our <span style="color: red; font-weight: bold;">🔥 Hot Deals</span> and 
+      <u>exclusive offers</u> available for a limited time only.
     </p>
-    <p>
-      Explore our <a href="#products">Products</a>, place an <a href="#order">Order</a>, 
-      or check out the <a href="#gallery">Gallery</a> for previews.
-    </p>
+    <p>Click on the sections above to explore our latest <a href="#products">Products</a>, 
+    <a href="#order">Place an Order</a>, or enjoy our <a href="#gallery">Gallery</a>.</p>
   </section>
 
   <!-- Products Section -->
   <section id="products">
-    <h2>🛍️ Our Product Catalog</h2>
+    <h2>🛒 Products</h2>
     <table>
       <tr>
         <th>Product</th>
@@ -74,41 +169,51 @@
         <th>Description</th>
       </tr>
       <tr>
-        <td>Wireless Headphones</td>
-        <td>$49.99</td>
-        <td><b><u>20% OFF!</u></b> Noise-canceling, over-ear comfort.</td>
+        <td>🎧 Wireless Headphones</td>
+        <td><b>$49.99</b></td>
+        <td><span style="color: green;"><b>20% OFF!</b></span> Noise-canceling, over-ear comfort.</td>
       </tr>
       <tr>
-        <td>Smart Watch</td>
+        <td>⌚ Smart Watch</td>
         <td>$99.00</td>
         <td>Fitness tracking and notifications in style.</td>
       </tr>
       <tr>
-        <td>USB-C Charger</td>
+        <td>⚡ USB-C Charger</td>
         <td>$15.00</td>
-        <td><i>Fast-charging compatible</i> with major brands.</td>
+        <td><i>Fast-charging</i> compatible with all major brands.</td>
       </tr>
     </table>
   </section>
 
   <!-- Order Form Section -->
   <section id="order">
-    <h2>📝 Place Your Order</h2>
+    <h2>📦 Order Form</h2>
     <form>
-      <label>Name:<br><input type="text" required></label><br>
-      <label>Email:<br><input type="email" required></label><br>
-      <label>Product:<br><input type="text" placeholder="e.g., Smart Watch" required></label><br>
-      <label>Quantity:<br><input type="number" min="1" required></label><br>
-      <label>Payment Method:<br>
-        <select>
-          <option>Card</option>
-          <option>Cash on Delivery</option>
-          <option>PayPal</option>
-        </select>
-      </label><br>
+      <label>Full Name:</label>
+      <input type="text" placeholder="Your Name" required>
+
+      <label>Email Address:</label>
+      <input type="email" placeholder="you@example.com" required>
+
+      <label>Product Name:</label>
+      <input type="text" placeholder="e.g., Smart Watch" required>
+
+      <label>Quantity:</label>
+      <input type="number" min="1" required>
+
+      <label>Payment Method:</label>
+      <select>
+        <option value="card">Card</option>
+        <option value="cod">Cash on Delivery</option>
+        <option value="paypal">PayPal</option>
+      </select>
+
       <label>
-        <input type="checkbox" required> I agree to the <a href="#">store policies</a>.
-      </label><br><br>
+        <input type="checkbox" required>
+        I agree to the <a href="#">Store Policies</a>.
+      </label>
+
       <button type="submit">Submit Order</button>
     </form>
   </section>
@@ -117,16 +222,16 @@
   <section id="gallery">
     <h2>🎬 Product Gallery</h2>
 
-    <h3>📢 Promotional Message</h3>
+    <h3>🔊 Promotional Audio</h3>
     <audio controls>
       <source src="promo.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
+      Your browser does not support audio.
     </audio>
 
-    <h3>🛠️ Product Overview Video</h3>
-    <video width="640" height="360" controls poster="thumbnail.jpg">
+    <h3>📹 Product Demo Video</h3>
+    <video controls poster="thumbnail.jpg">
       <source src="product_demo.mp4" type="video/mp4">
-      Your browser does not support the video element.
+      Your browser does not support video.
     </video>
   </section>
 
