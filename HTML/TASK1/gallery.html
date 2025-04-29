@@ -1,28 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Gallery - TechFest 2025</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        nav {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #222;
+        }
+        h3 {
+            margin-top: 40px;
+            color: #555;
+        }
+        audio, video {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
+
     <nav>
-        <a href="home.html">Home</a> |
-        <a href="schedule.html">Schedule</a> |
-        <a href="reg.html">Registration</a> |
+        <a href="home.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="reg.html">Registration</a>
         <a href="gallery.html">Gallery</a>
     </nav>
 
-    <h2>Glimpses from Previous TechFest</h2>
+    <div class="container">
+        <h2>Glimpses from Previous TechFest</h2>
 
-    <h3>🎧 Audio Highlights</h3>
-    <audio controls>
-        <source src="highlights.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+        <h3>🎧 Audio Highlights</h3>
+        <audio controls>
+            <source src="highlights.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
 
-    <h3>🎥 Video Moments</h3>
-    <video width="600" controls poster="poster.jpg">
-        <source src="techfest-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+        <h3>🎥 Video Moments</h3>
+        <video controls poster="poster.jpg">
+            <source src="techfest-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
 </body>
 </html>
